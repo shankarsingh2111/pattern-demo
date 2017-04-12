@@ -28,16 +28,28 @@ public class RemoteControlTest {
 		remoteControl.setCommands(1, garageDoorOpenCommand, new GarageDoorCloseCommand(garageDoor));
 		remoteControl.setCommands(2, new StereoOnWithCDCommand(stereo), new StereoOffWithCDCommand(stereo));
 
+
+		MacroCommand partyOn = new MacroCommand(new Command[]{new StereoOnWithCDCommand(stereo), lightOnCommand});
+		MacroCommand partyOff = new MacroCommand(new Command[]{new StereoOffWithCDCommand(stereo), new LightOffCommand(light)});
+
+		remoteControl.setCommands(3, partyOn, partyOff);
+
+
+
 		Log.i("remoteControl=", ">"+remoteControl);
 
-		remoteControl.onWasPushed(1);
-		remoteControl.onWasPushed(2);
-		remoteControl.onWasPushed(0);
+//		remoteControl.onWasPushed(1);
+//		remoteControl.onWasPushed(2);
+//		remoteControl.onWasPushed(0);
+		remoteControl.onWasPushed(3);
 
 
-		remoteControl.offWasPushed(2);
-		remoteControl.offWasPushed(1);
-		remoteControl.offWasPushed(0);
+//		remoteControl.offWasPushed(2);
+//		remoteControl.offWasPushed(1);
+//		remoteControl.offWasPushed(0);
+		remoteControl.offWasPushed(3);
+
+
 
 	}
 
