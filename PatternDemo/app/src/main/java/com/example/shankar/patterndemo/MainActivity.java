@@ -1,6 +1,8 @@
 package com.example.shankar.patterndemo;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -11,12 +13,20 @@ import android.view.View;
 
 import com.example.shankar.patterndemo.adapter.EnumTest;
 
+import org.osmdroid.config.Configuration;
+
 public class MainActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		Context ctx = getApplicationContext();
+		//important! set your user agent to prevent getting banned from the osm servers
+		Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
+
+
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
@@ -29,6 +39,22 @@ public class MainActivity extends AppCompatActivity {
 				EnumTest.main();
 			}
 		});
+
+//		container
+		getSupportFragmentManager().beginTransaction()
+				.add(R.id.container, new StarterMapFragment(), StarterMapFragment.class.getName())
+				.commit();
+
+	}
+
+	@Override
+	public void onResume(){
+		super.onResume();
+		//this will refresh the osmdroid configuration on resuming.
+		//if you make changes to the configuration, use
+		//SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		//Configuration.getInstance().save(this, prefs);
+		Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
 	}
 
 	@Override
