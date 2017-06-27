@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.shankar.patterndemo.adapter.EnumTest;
+import com.example.shankar.patterndemo.template.BeverageTestDrive;
 
 import org.osmdroid.config.Configuration;
 
@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
 			public void onClick(View view) {
 				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 						.setAction("Action", null).show();
-				EnumTest.main();
+				BeverageTestDrive.main(new String[]{});
 			}
 		});
 
 //		container
-		getSupportFragmentManager().beginTransaction()
-				.add(R.id.container, new StarterMapFragment(), StarterMapFragment.class.getName())
-				.commit();
+//		getSupportFragmentManager().beginTransaction()
+//				.add(R.id.container, new StarterMapFragment(), StarterMapFragment.class.getName())
+//				.commit();
 
 	}
 
@@ -78,4 +78,43 @@ public class MainActivity extends AppCompatActivity {
 
 		return super.onOptionsItemSelected(item);
 	}
+
+
+//	private void animateDown(){
+//		if(!animationStarted && scrollView.getVisibility() == View.VISIBLE){
+//			Animation translate = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 0f,
+//					Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 1f);
+//			translate.setDuration(300);
+//			translate.setAnimationListener(new Animation.AnimationListener() {
+//				@Override
+//				public void onAnimationStart(Animation animation) {
+//
+//				}
+//
+//				@Override
+//				public void onAnimationEnd(Animation animation) {
+//					scrollView.setVisibility(View.GONE);
+//					animationStarted = false;
+//				}
+//
+//				@Override
+//				public void onAnimationRepeat(Animation animation) {
+//
+//				}
+//			});
+//			scrollView.clearAnimation();
+//			scrollView.startAnimation(translate);
+//			animationStarted = true;
+//		}
+//	}
+//
+//	private void animateUp(){
+//		Animation translate = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 0f,
+//				Animation.RELATIVE_TO_SELF, 1f, Animation.RELATIVE_TO_SELF, 0f);
+//		translate.setDuration(300);
+//		scrollView.setVisibility(View.VISIBLE);
+//		scrollView.clearAnimation();
+//		scrollView.startAnimation(translate);
+//	}
+
 }
