@@ -17,7 +17,6 @@ public class Coffee extends CaffeineBeverage{
 		System.out.println("addSugarAndMilk");
 	}
 
-	@Override
 	public boolean customerWantsCondiments() {
 		System.out.println("customerWantsCondiments used");
 		String answer = getUserInput();

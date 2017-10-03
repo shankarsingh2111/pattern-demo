@@ -17,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.shankar.patterndemo.template.DuckSortTestDrive;
+
 import org.osmdroid.config.Configuration;
 
 import java.util.ArrayList;
@@ -50,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 			public void onClick(View view) {
 //				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //						.setAction("Action", null).show();
-//				BeverageTestDrive.main(new String[]{});
-				Util.scheduleJob(MainActivity.this);
+				DuckSortTestDrive.main();
+//				Util.scheduleJob(MainActivity.this);
 //				startActivity(new Intent(MainActivity.this, PlayerActivity.class));
 			}
 		});
