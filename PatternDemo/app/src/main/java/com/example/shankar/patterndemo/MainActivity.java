@@ -4,20 +4,26 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.shankar.patterndemo.template.DuckSortTestDrive;
+import com.example.shankar.patterndemo.iterator.MenuTestDrive;
+import com.example.shankar.patterndemo.qrgenerator.QRGContents;
+import com.example.shankar.patterndemo.qrgenerator.QRGEncoder;
+import com.google.zxing.WriterException;
 
 import org.osmdroid.config.Configuration;
 
@@ -27,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 	private LocalWordService s;
 	private ArrayList<String> wordList;
 	private ArrayAdapter<String> adapter;
+	private ImageView ivQR;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 		wordList = new ArrayList<String>();
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, wordList);
 		listView.setAdapter(adapter);
+
+		ivQR = (ImageView) findViewById(R.id.ivQR);
 
 		Context ctx = getApplicationContext();
 		//important! set your user agent to prevent getting banned from the osm servers
@@ -52,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 			public void onClick(View view) {
 //				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //						.setAction("Action", null).show();
-				DuckSortTestDrive.main();
+				MenuTestDrive.main();
 //				Util.scheduleJob(MainActivity.this);
 //				startActivity(new Intent(MainActivity.this, PlayerActivity.class));
 			}
@@ -67,13 +76,13 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 //		MediaButtonIntentReceiver r = new MediaButtonIntentReceiver();
 //		registerReceiver(r, filter);
 
-		stopService(new Intent(this, MyService.class));
-		startService(new Intent(this, MyService.class));
 
 //		((AudioManager)getSystemService(AUDIO_SERVICE)).registerMediaButtonEventReceiver(
 //				new ComponentName(
 //						getPackageName(),
 //						MediaButtonIntentReceiver.class.getName()));
+
+		TesterKt.start();
 
 	}
 
@@ -98,8 +107,6 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		stopService(new Intent(this, MyService.class));
-		startService(new Intent(this, MyService.class));
 	}
 
 	@Override
@@ -138,6 +145,19 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 			case R.id.triggerServiceUpdate:
 				Intent service = new Intent(getApplicationContext(), LocalWordService.class);
 				getApplicationContext().startService(service);
+
+				QRGEncoder qrgEncoder = new QRGEncoder(
+						"Shankar", null,
+						QRGContents.Type.TEXT,
+						200);
+				try {
+					Bitmap bitmap = qrgEncoder.encodeAsBitmap();
+					ivQR.setImageBitmap(bitmap);
+				} catch (WriterException e) {
+					Log.v("HElo", e.toString());
+				}
+
+
 				break;
 		}
 	}
@@ -153,5 +173,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 	public void onServiceDisconnected(ComponentName name) {
 		s = null;
 	}
+
+
 
 }

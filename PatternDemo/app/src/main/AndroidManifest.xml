@@ -28,35 +28,8 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".mediaplayer.BackgroundAudioService">
-            <intent-filter>
-                <action android:name="android.intent.action.MEDIA_BUTTON"/>
-                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
-                <action android:name="android.media.browse.MediaBrowserService"/>
-            </intent-filter>
-        </service>
+        <activity android:name=".SignatureActivity"/>
 
-        <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.MEDIA_BUTTON"/>
-                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
-            </intent-filter>
-        </receiver>
-
-        <activity android:name=".mediaplayer.PlayerActivity">
-        </activity>
-
-        <receiver android:name=".mediaplayer.MediaButtonIntentReceiver">
-            <intent-filter android:priority="1000000">
-                <action android:name="android.intent.action.MEDIA_BUTTON"/>
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name=".MyService"
-            android:enabled="true"
-            android:exported="true">
-        </service>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
