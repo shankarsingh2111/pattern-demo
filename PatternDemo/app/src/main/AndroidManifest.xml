@@ -21,13 +21,12 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
-
         <activity android:name=".SignatureActivity"/>
 
         <!--
@@ -45,25 +44,36 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
         </activity>
 
         <service
             android:name=".TestJobService"
             android:label="Word service"
-            android:permission="android.permission.BIND_JOB_SERVICE" >
-
+            android:permission="android.permission.BIND_JOB_SERVICE">
         </service>
-
         <service
             android:name=".LocalWordService"
-            android:label="Word service" >
+            android:label="Word service">
         </service>
 
+        <activity android:name=".Main2Activity"
+            android:label="Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".AuthenticatedUserActivity"
+                  android:label="AuthenticatedUserActivity">
+        </activity>
     </application>
 
 </manifest>
