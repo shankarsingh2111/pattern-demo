@@ -49,8 +49,6 @@
 
         </activity>
 
-
-
         <service
             android:name=".TestJobService"
             android:label="Word service"
