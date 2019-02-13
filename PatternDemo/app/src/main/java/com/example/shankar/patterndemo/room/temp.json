@@ -1,0 +1,389 @@
+{
+  "driver": {
+    "error": {
+      "invalid_fare": "Valores de tarifa no válidos",
+      "already_registered": "Ya estás registrado con nosotros. Por favor inicie sesión usando su número de teléfono registrado ",
+      "rating": "Error al calificar al cliente",
+      "self_assign": "El conductor registrado no puede tomar paseos",
+      "not_registered": "No está registrado con nosotros. Por favor regístrese.",
+      "customer_driver_reg": "No está registrado como conductor con nosotros. 'Regístrese como conductor en la aplicación del controlador o inicie sesión en la aplicación del cliente para continuar como cliente"
+    },
+    "documents": {
+      "image_deleted": "La imagen se ha eliminado correctamente",
+      "verified": "Documentos verificados satisfactoriamente. Por favor, vuelva a iniciar sesión para comenzar a utilizar la aplicación ",
+      "upload_driver_image": "No se ha cargado ninguna imagen del controlador. Por favor, cargue una imagen del controlador y vuelva a intentarlo ",
+      "upload_req_docs": "Por favor, cargue los documentos requeridos"
+    },
+    "ride_end_payment": {
+      "title": "Pago recibido",
+      "message": "El pago de {{{línea_fare},},}, se ha pagado con éxito por el viaje realizado en {{{tiempo},},}, con ID de viaje: {{{ride_id},},},.",
+      "mpesa_push": "Se ha enviado una solicitud de pago de {{{amount},},}, a través de USSD push. Acepta amablemente que pagar "
+    },
+    "referral": {
+      "driver_to_user_referral_text": "Por favor ingrese el número de teléfono del cliente",
+      "referral_dialog_text": "Ingrese el número de teléfono",
+      "referral_button_text": "Recomienda a su amigo",
+      "referral_message": "Comparta su código de referencia y {{{upfront_text},},}, {{{bonus},},}, créditos con nosotros después de completar {{num_rides},},}, paseos",
+      "referral_message_driver": "Comparte tu código de referencia y {{{upfront_text},},}, {{{bonus},},}, créditos después de completar {{num_rides},},}, paseos",
+      "upfront_text": "{{{upfront_amount},},}, Gane créditos por referencia, donde se agregarán {{{upfront_amount},},}, créditos cuando sus referencias se hayan registrado",
+      "referral_dialog_hint_text": "Número de teléfono",
+      "referral_sms_to_customer_text": "Estimado usuario: Según lo solicitado, use mi código {{{referral_code},},}, para descargar {{{app_name},},}, desde {{{branch_link},},},",
+      "response_referral_sms_sent": "Su código de referencia se ha enviado al cliente {{{phone_no},},},"
+    },
+    "ride": {
+      "mark_arrived_failed": "¡Lo siento! El usuario no fue informado sobre esto. Inténtalo de nuevo.",
+      "customer_already_cancelled": "El usuario ya ha cancelado el viaje.",
+      "ride_cancel_success": "El servicio fue cancelado exitosamente",
+      "already_started": "El servicio ya comenzó. No puedes cancelar el paseo ahora. ",
+      "new_ride_request": "Tienes 1 solicitud de viaje nueva",
+      "customer_cancelled_request": "Solicitud cancelada por el cliente",
+      "ride_cancel_reasons": "No se puede contactar al cliente ;;; El vehículo no funciona ;;; La distancia de recolección es mayor de la esperada ;;; Ubicación incorrecta de recolección del cliente ;;; Más clientes a bordo de lo especificado ;;; El cliente tarda demasiado tiempo ",
+      "delivery_cancel_reasons": "Cliente no disponible ;;; Dirección de entrega incorrecta;;; Cliente se negó a aceptar el pedido ;;; Problema con el paquete del pedido",
+      "ride_cash_back_message": "Estimado conductor: {{{operator_name},},}, ha agregado Rs 100 a su billetera. La comisión de viaje se deducirá únicamente del saldo de su billetera. ",
+      "after_ride_cash_back_message": "Estimado conductor, la comisión de este viaje se deducirá del saldo de su billetera. Gracias por conducir con nosotros ",
+      "deliveries_push": "Ha aceptado la entrega a las siguientes direcciones:",
+      "deliveries_push_title": "Se aceptan entregas",
+      "delivery_ended": "Ride terminó con éxito.",
+      "end_delivery_err": "No se puede finalizar el recorrido hasta que se inicie",
+      "end_delivery_success": "Ride terminó exitosamente",
+      "mark_delivered": "Entrega marcada como completada.",
+      "delivery_cancelled": "Entrega marcada como cancelada.",
+      "no_active_ride": "No se encontraron viajes activos.",
+      "ride_not_started": "El viaje aún no ha comenzado.",
+      "ack_received": "Ack recibió",
+      "rating": "Cliente exitosamente calificado"
+    },
+    "timeout": {
+      "timeout_message": "Se acabó el tiempo de espera"
+    },
+    "availability": {
+      "response_failure": "La disponibilidad no se pudo cambiar en este momento. Inténtalo de nuevo.",
+      "response_availability_on": "Las solicitudes de viajes se le enviarán ahora",
+      "response_availability_off": "Las solicitudes de viajes NO se le enviarán ahora",
+      "delivery_on": "La solicitud de entrega se enviará a usted ahora.",
+      "delivery_off": "La solicitud de entrega NO se le enviará ahora",
+      "tnc_not_accepted": "Por favor acepte los Términos y Condiciones"
+    },
+    "ride_history": {
+      "response_failure": "El historial de viajes no se pudo recuperar en este momento. Inténtalo de nuevo.",
+      "ride_completed": "Servicio Completado",
+      "ride_cancelled": "Servicio Cancelado",
+      "response_not_a_driver": "El usuario dado no es un controlador",
+      "delivery_completed": "Delivery Completed",
+      "delivery_cancelled": "Delivery Canceled"
+    },
+    "accept_ride": {
+      "response_failure": "No se pudo aceptar el viaje en este momento. Por favor intente mas tarde.",
+      "response_session_timedout": "La sesión ya finalizó el tiempo de espera",
+      "response_accepted_by_other_driver": "Servicio ya aceptado por otro Jaime",
+      "response_existing_manual_engagement": "Ya se ha creado un compromiso manual para usted. Por favor reinicie la aplicación si es necesario. ",
+      "response_already_cancelled": "El usuario ya ha cancelado la solicitud",
+      "response_already_in_super_ride": "Super ride no puede ser aceptado ya que ya estás en Super ride.",
+      "response_pool_cnt_be_accepted": "No se puede aceptar el paseo en billar. Se ha alcanzado el límite máximo de clientes de la agrupación. ",
+      "response_already_accepted_other_ride": "Ya has aceptado el paseo. Por favor, mate la aplicación y luego abra ",
+      "update_app": "Por favor actualice su aplicación",
+      "high_cancellations": "¡Atención! Ha habido un aumento en las cancelaciones de viaje por usted. Su cuenta se desactivará temporalmente en caso de más cancelaciones o viajes perdidos "
+    },
+    "cancel_ride": {
+      "notif_customer_ride_cancel": "El cliente ha cancelado el viaje",
+      "response_request_timedout": "Tiempo de espera agotado para la solicitud",
+      "response_ride_accepted": "Ride ya aceptado por ti. Por favor, mate la aplicación y vuelva a intentarlo ",
+      "response_request_rejected": "Rechazado con éxito"
+    },
+    "start_ride": {
+      "response_failure": "El viaje no se pudo iniciar en este momento. Inténtalo de nuevo.",
+      "response_ride_already_cancelled": "El usuario ya ha cancelado el viaje.",
+      "response_success": "Ride comenzó"
+    },
+    "end_ride": {
+      "response_failure": "El viaje no se pudo terminar en este momento. Inténtalo de nuevo.",
+      "custom_text": "Para consultar el resumen de su recorrido, visite la pantalla de ganancias"
+    },
+    "paytm_recharge": {
+      "response_execution_error": "¡Lo siento! Algo salió mal. Inténtalo de nuevo.",
+      "response_driver_daily_limit": "Has alcanzado tu límite diario de recarga. Por favor, inténtalo de nuevo mañana.",
+      "response_driver_daily_recharge_limit": "La cantidad ingresada actual excede su límite diario de recarga.",
+      "response_customer_daily_limit": "La recarga no se puede completar ya que el cliente ha alcanzado el límite diario de recarga",
+      "response_customer_daily_recharge_limit": "El monto actual ingresado excede el límite diario de recarga del cliente",
+      "response_customer_weekly_limit": "La recarga no se puede completar porque el cliente ha alcanzado el límite de recarga semanal",
+      "response_customer_weekly_recharge_limit": "El monto actual ingresado excede el límite de recarga semanal del cliente.",
+      "response_customer_monthly_limit": "La recarga no se puede completar ya que el cliente ha alcanzado el límite de recarga mensual",
+      "response_customer_monthly_recharge_limit": "El monto actual ingresado excede el límite de recarga mensual del cliente.",
+      "response_amount_exceeding_daily_limit": "El monto actual ingresado excede el límite diario",
+      "response_driver_weekly_limit": "Has alcanzado tu límite semanal. Por favor, inténtalo de nuevo la próxima semana ",
+      "response_driver_weekly_recharge_limit": "La cantidad actual ingresada excede su límite de recarga semanal",
+      "response_driver_monthly_limit": "El monto actual ingresado excede su límite de recarga mensual",
+      "response_invalid_amount": "Por favor ingrese una cantidad válida.",
+      "response_pending_request": "¡Transacción no procesada! Espere a que el cliente apruebe la solicitud de recarga previa pendiente ",
+      "response_customer_paytm_inactive": "Inicie sesión con Paytm para usar esta función. Transacción abortada. ",
+      "response_unverified_transaction": "No se pudo verificar la transacción.",
+      "response_duplicate_transaction": "¡Alerta de transacción duplicada! Transacción abortada. ",
+      "response_paytm_limit_reached": "Has alcanzado tu límite máximo con la billetera Paytm",
+      "response_customer_paytm_diff_account": "Transacción abortada. Su cuenta Paytm está vinculada con otro número de teléfono. ",
+      "response_initiated": "La recarga se ha iniciado con éxito. Por favor, pregunte al cliente para abrir la aplicación. ",
+      "notification_failure": "No se pudo completar la recarga de efectivo de Paytm.",
+      "notification_success": "La recarga en efectivo de Paytm se ha completado.",
+      "response_not_allowed": "No tiene permiso para realizar esta solicitud",
+      "response_invalid_customer_details": "Detalles del cliente no válidos",
+      "response_update_app": "Transacción abortada. Por favor, pídale al cliente que actualice su aplicación "
+    },
+    "leaderboard": {
+      "response_failure": "No se pudieron cargar los paseos. Inténtalo de nuevo",
+      "response_success": "Driver Leader board se creó correctamente",
+      "leader_board_referrals_text": "No. de referencias",
+      "leader_board_rides_text": "No. de viajes"
+    },
+    "invoice": {
+      "invoice_status": {
+        "0": "factura generada",
+        "10": "factura generada",
+        "15": "Bloqueado",
+        "20": "Enviado al banco",
+        "30": "procesado",
+        "UNKNOWN": "Desconocido",
+        "AMOUNT_ADJUSTED": "Sobresaliente ajustado",
+        "ACTUAL": "Actual",
+        "SUCCESS": "SUCCESS",
+        "SENT": "SENT",
+        "CURRENT": "Current"
+      }
+    },
+    "notifications": {
+      "notification_tips_text": "Consejos para ganar",
+      "notification_message_text": "Mensajes",
+      "notification_tips_str1": "Solicite a su cliente que califique su servicio para obtener más viajes",
+      "notification_tips_str2": "Tome del cliente la tarifa que se muestra en la pantalla para obtener mejores calificaciones",
+      "notification_tips_str3": "Llegue al cliente a tiempo para obtener más viajes y la oportunidad de ganar más",
+      "tip_success": "Ha recibido una propina por el monto {{{currency_symbol},},}, {{{amount},},},",
+      "tip_success_title": "¡Sugerencia!"
+    },
+    "delivery": {
+      "response_failure": "Los detalles de entrega no se pudieron recuperar en este momento. Inténtalo de nuevo.",
+      "null_response": "No se encontraron detalles de entrega"
+    },
+    "Earning_invoicing": {
+      "fare": "Fare",
+      "ride_fare": "Ride Fare",
+      "delivery_fare": "Delivery Fare",
+      "priority_tip": "Consejo de prioridad",
+      "accept_subsidy": "Aceptar subsidio",
+      "cancel_subsidy": "Cancel Subsidy",
+      "jugnoo_commission": "Comisión",
+      "manual_adjustment_daily": "Ajuste manual (para la próxima factura)",
+      "manual_adjustment": "Ajuste manual",
+      "phone_deductions": "Deducciones telefónicas",
+      "referral_amount": "Cantidad de referencia",
+      "outstanding_amount": "Cantidad pendiente",
+      "driver_pickup_waiting_fare": "Recogida en espera",
+      "driver_parking_fare": "Parking Fare",
+      "driver_cancellation_charges": "Cargos por cancelación",
+      "credited_to_wallet": "Credited To Wallet",
+      "deducted_from_wallet": "Deducted From Wallet",
+      "toll_charge": "Toll Charge",
+      "tip_amount": "Tip",
+      "luggage_charges": "cargos por equipaje",
+      "bank_charges": "Cargos bancarios"
+    },
+    "parameters": {
+      "raised_on": "RAISED ON",
+      "a": "AT",
+      "delivery": "Delivery",
+      "ride": "Viaje",
+      "pool_ride": "Pool Ride",
+      "digital_signature_popup": "Por favor, confirme que ha leído los términos y condiciones proporcionando una firma digital"
+    },
+    "last_trip": {
+      "título": "ULTIMO SERVICIO",
+      "text_view_1": "",
+      "text_view_2": "",
+      "text_view_sub": ""
+    },
+    "todays_total": {
+      "title": "TOTA DE HOY",
+      "text_view_1": "Kms viajó",
+      "text_view_2": "Viajes",
+      "text_view_sub": ""
+    },
+    "fulfillment": {
+      "title": "FULFILMENT",
+      "text_view_1": "Solicitudes cumplidas",
+      "text_view_2": "Solicitudes perdidas",
+      "text_view_sub": "Cumplimiento",
+      "rides_missed": "Servicios perdidos hoy",
+      "no_rides_missed": "No se ha perdido ningún viaje hoy"
+    },
+    "high_demand_areas": {
+      "title": "ÁREAS DE ALTA DEMANDA",
+      "text_view_1": "Haga clic aquí para conocer las áreas de alta demanda en su región",
+      "text_view_2": "",
+      "text_view_sub": ""
+    },
+    "branding": {
+      "title": "VALUE BRANDING",
+      "text_view_1": "Haga clic aquí para iniciar el proceso de creación de marca.",
+      "text_view_2": "",
+      "text_view_sub": ""
+    },
+    "maximum_earning": {
+      "title": "MAXIMUM EARNINGS",
+      "text_view_1": "Su ganancia máxima al trabajar con nosotros",
+      "text_view_2": "",
+      "text_view_sub": ""
+    },
+    "self_audit": {
+      "app_open_popup": "Estimado conductor: Le solicitamos que haga clic y envíe imágenes del vehículo para su auditoría",
+      "push_title": "Actualización de auditoría",
+      "full_branding": "Estimado conductor, ¡Felicitaciones! Su auditoría ha sido aprobada como Marca completa",
+      "partial_branding": "Estimado controlador: su auditoría ha sido aprobada como Marca parcial",
+      "no_branding": "Estimado conductor, su auditoría no ha sido aprobada debido a que no tiene marca",
+      "image_rejected": "Estimado controlador: Las imágenes enviadas por usted han sido rechazadas. Por favor reenvíe ",
+      "nj_full_branding": "Estimado conductor, ¡Felicitaciones! Su auditoría para {{{vehicle_no},},}, ha sido aprobada como Marca completa",
+      "nj_partial_branding": "Estimado conductor, su auditoría para {{{vehicle_no},},}, ha sido aprobada como \" Marca parcial",
+      "nj_no_branding": "Estimado conductor, su auditoría para {{{vehicle_no},},}, no se ha aprobado debido a que no se ha calificado.",
+      "nj_image_rejected": "Estimado conductor: Las imágenes enviadas por usted para {{{vehicle_no},},}, han sido rechazadas. Por favor reenvíe ",
+      "sa_last_audit": "Última auditoría en",
+      "sa_next_audit": "Próxima auditoría pendiente",
+      "njb_promo_msg": "Coloca pegatinas en nuevos vehículos y gana",
+      "njb_count_str": "No. de vehículos con la marca:",
+      "nja_promo_msg": "Audita vehículos de marca y gana",
+      "nja_count_str": "No. de vehículos auditados:",
+      "image_upload_failed": "Falló la carga de la imagen, inténtalo de nuevo",
+      "duplicate_njb": "El vehículo ya está registrado con nosotros.",
+      "audit_while_branding": "El vehículo no puede ser auditado. Por favor, póngase en contacto con su oficina local para obtener ayuda ",
+      "audit_before_branding": "El vehículo no está registrado con nosotros. Por favor, póngase en contacto con su oficina local para obtener ayuda ",
+      "success_submit": "Los detalles se han enviado correctamente",
+      "unsuccessful_submit": "Envíe primero las imágenes requeridas"
+    },
+    "self_enrollment": {
+      "satisfaction_pending": "Sus documentos se cargaron correctamente, espere su aprobación",
+      "upload_mandatory_document": "Por favor, cargue todos los documentos obligatorios",
+      "upload_required_document_after_exp": "Por favor, cargue todo el documento requerido",
+      "upload_required_document": "Por favor, cargue todos los documentos Requeridos, de lo contrario los servicios se desactivarán",
+      "days_left": "days left",
+      "rejection_message": "Algunos de los documentos han sido rechazados. Por favor, vuelva a subirlos. ",
+      "success_upload": "Los documentos se han cargado. Por favor, espere la activación ",
+      "already_verified": "Ya verificado. Por favor, vuelva a iniciar sesión para comenzar a utilizar la aplicación. ",
+      "few_reqd_docs_pending_upload": "No se han cargado todos los documentos requeridos. Por favor, cargue todos los documentos requeridos y espere la aprobación ",
+      "few_mand_docs_pending_upload": "No se han cargado todos los documentos obligatorios. Por favor, cargue todos los documentos obligatorios y espere la aprobación ",
+      "already_uploaded": "Los documentos ya se han enviado al administrador de la ciudad para su revisión. Por favor, espere hasta que los documentos hayan sido revisados. ",
+      "branding_docs_uploaded": "Las imágenes de marca se enviaron para su revisión. Por favor, espere hasta que las imágenes hayan sido revisadas "
+    },
+    "driver_credits": {
+      "own_phone_no": "No puedes enviarte créditos a ti mismo",
+      "driver_not_found": "No se encontró ningún controlador con el número de teléfono dado",
+      "get_credits_info": "Obtenga créditos de otros conductores para obtener más Créditos y disfrute de una buena experiencia continua"
+    },
+    "branding_notification": {
+      "uploaded": "Hola: acaba de cargar la foto de la etiqueta en auto, que nos llegó. El cheque a la mayor brevedad se depositará en su billetera de luciérnaga. Gracias",
+      "approved": "Hola: se encontró que la foto de la etiqueta autoadhesiva que cargó en la aplicación es absolutamente correcta. Por lo tanto, el dinero ha sido depositado en su billetera de luciérnaga. Gracias",
+      "cron": "Hello - Today you upload the photo of your sticker again in the firefly application and get a chance to earn extra money again. Gracias",
+      "rejected": "Hello - The photo of the auto sticker you uploaded on the application has not been found correctly. Por favor, vuelva a subir y la oportunidad de ganar dinero extra! Gracias"
+    }
+  },
+  "locale_updated": "locale updated",
+  "payments": {
+    "NOTE": "*Adjustments and deductions not included"
+  },
+  "auto_assign": {
+    "on": "Hola driver_name, \n¡Enhorabuena! Podríamos ver que está cancelando menos número de viajes ahora. Sus solicitudes de viaje serán aceptadas automáticamente de nuevo. ",
+    "off": "Hola, driver_name, \nComo está cancelando demasiados viajes, las solicitudes de viajes ya no serán aceptadas automáticamente. Cancele un número menor de viajes para reactivarlo nuevamente "
+  },
+  "response": {
+    "parameters_missing": "Faltan algunos parámetros.",
+    "auth_err": "El usuario no pudo ser verificado, Token de acceso no válido",
+    "service_down": "Algo salió mal, inténtalo de nuevo más tarde.",
+    "registration_err": "¡Lo siento! El usuario no puede estar registrado en este momento. Inténtalo de nuevo.",
+    "login_err": "¡Lo siento! El usuario no puede iniciar sesión en este momento. Inténtalo de nuevo.",
+    "logout_err": "No se pudo cerrar la sesión del usuario. Por favor, inténtelo de nuevo más tarde",
+    "password_reset_err": "La contraseña no se pudo restablecer en este momento. Por favor, inténtelo de nuevo más tarde",
+    "otp_failure": "¡Lo siento! La OTP no pudo ser verificada. Inténtalo de nuevo.",
+    "incorrect_password": "No está autorizado para realizar esta acción",
+    "parameters_invalid": "Algunos parámetros no son válidos",
+    "success": "Success"
+  },
+  "customer": {
+    "error": {
+      "invalid_phone_no": "Indique un número de teléfono válido",
+      "ride_summary": "No se pudo obtener el resumen del recorrido en este momento. Inténtalo de nuevo",
+      "bad_request": "Bad Request",
+      "wrong_promo": "¡Lo siento! El código ingresado no pudo ser verificado en este momento. Inténtalo de nuevo.",
+      "no_coupons": "No hay cupones disponibles para el usuario",
+      "phone_no_not_updated": "El número de teléfono no se pudo actualizar en este momento. Por favor, inténtelo de nuevo más tarde.",
+      "invalid_eng_id": "No se ha encontrado ningún compromiso para el usuario",
+      "out_of_range_drop": "Esta ubicación de lanzamiento está fuera de los límites operacionales de nuestra ciudad",
+      "google_failure": "No se puede obtener la distancia y el tiempo de google",
+      "not_registered": "No está registrado con nosotros. Por favor regístrese.",
+      "invalid_login_details": "Ha ingresado detalles de inicio de sesión no válidos. Por favor verifique sus datos o regístrese con nosotros ",
+      "ride_in_progress": "Ride in progress. Por favor, intente de nuevo después de algún tiempo ",
+      "please_wait": "Por favor, espere un momento antes de poder continuar.",
+      "operator_blocked": "No está autorizado para realizar esta acción.",
+      "out_of_service_area": "Su ubicación actual está fuera de los límites operacionales de la ciudad"
+    },
+    "app_update": {
+      "title": "Update Version",
+      "message": "¡Por favor actualice su aplicación con una nueva versión! "
+    },
+    "tip": {
+      "invalid_tip": "Por favor ingrese una cantidad de propina válida",
+      "driver_update_app": "Su controlador está en una versión anterior de la aplicación.",
+      "tip_invalid_pymt_mode": "La propina no se puede pagar después de completar el viaje, cuando el pago se realiza a través de efectivo",
+      "already_tipped": "Ya le ha dado una propina al conductor para este viaje",
+      "low_balance": "Balance de billetera bajo",
+      "tip_received": "Ha recibido una cantidad de la propina {{{{currency_symbol},},}, {{{amount},},},",
+      "tip_after_ride_start": "La sugerencia se puede agregar solo después del inicio del recorrido"
+    },
+    "ride_request": {
+      "assign_driver": "Asignando controlador",
+      "error": "La solicitud no se pudo procesar en este momento. Inténtalo de nuevo.",
+      "user_blocked": "¡Lo siento! Los servicios han sido denegados debido a la violación de los términos y condiciones ",
+      "update_app": "¡Lo siento! Los servicios han sido denegados debido a un problema técnico. Por favor, actualice a la última versión de la aplicación. ",
+      "pending_debt": "Resuelva su saldo pendiente de la cantidad {{{user_debt},},}, antes de una nueva transacción",
+      "user_not_verified": "¡Lo siento! No estás verificado con nosotros. Por favor, contáctenos usando nuestro soporte de chat en la aplicación para hacer uso de los servicios nuevamente ",
+      "ecutive_ride_requests ": " Por favor, espere un momento antes de que pueda solicitar un viaje nuevamente ",
+      "service_not_avail": "¡Lo siento! Por el momento no brindamos servicios en tu ciudad, pero vamos a llegar pronto ",
+      "coupon_not_allowed": "El cupón seleccionado no se puede aplicar en este viaje.",
+      "invalid_drop": "Por favor, ingrese una ubicación válida para soltar y luego intente nuevamente",
+      "disable_to_fetch_fares": "No podemos obtener su tarifa de viaje en este momento. Por favor, inténtelo de nuevo",
+      "coupon_priority_tip": "El cupón seleccionado no se puede aplicar en viajes con punta de prioridad",
+      "bid_start": "Los controladores comenzarán a hacer una oferta ahora",
+      "no_supply": "Lo sentimos, todos nuestros controladores están ocupados. No podemos ofrecerle servicios en este momento. Por favor, inténtalo de nuevo más tarde "
+    },
+    "ride_accepted": {
+      "message": "Su {{{vehicle_name},},}, {{{auto_no},},}, está en camino. Tiemo de espera {{{eta},},}, minutos ",
+      "title": "Viaje aceptado",
+      "enter_dest_title": "Háganos saber su destino",
+      "enter_dest_message": "Ingrese su destino en la aplicación para ayudar a los conductores a conocer su destino con anticipación"
+    },
+    "request_cancel": {
+      "success": "cancelado con éxito",
+      "already_accepted": "¡Tu viaje ya ha sido aceptado!"
+    },
+    "ride_cancel": {
+      "driver_cancelled": "El conductor ha cancelado el viaje. Inténtalo de nuevo. ¡Disculpas por el inconveniente!",
+      "title": "Servicio cancelado",
+      "no_ongoing_ride": "En este momento no se puede encontrar un viaje en curso para ti",
+      "already_started": "¡Lo siento! El viaje ya está en curso y no se puede cancelar ahora ",
+      "success": "El viaje ha sido cancelado.",
+      "penalty": "El viaje se ha cancelado y $. {{{deduced},},}, se han deducido de su forma de pago",
+      "fallo": "El viaje no se pudo cancelar en este momento. Inténtalo de nuevo."
+    },
+    "rating": {
+      "rating_blocked": "ventana emergente de calificación bloqueada",
+      "already_rated": "already_rated",
+      "rating": "Driver exitosamente calificado",
+      "rate_failure": "Error al calificar el controlador"
+    },
+    "driver_arrived": {
+      "message": "Su Jaime {{{auto_no},},}, está llegando ahora",
+      "title": "Llegando"
+    },
+    "ride_started": {
+      "message": "Su Jaime es: {{{driver_name},},},",
+      "title": "Servicio iniciado"
+    },
+    "ride_end": {
+      "message": "Su pago fue {{{currency},},},{{{fare},},}, {{{wallet},},}, {{{cash},},}, {{{paytm},},}, {{{mobikwik},},}, {{{freecharge},},},",
+      "title": "Fin del viaje, Gracias!"
+    }
+  }
+}
