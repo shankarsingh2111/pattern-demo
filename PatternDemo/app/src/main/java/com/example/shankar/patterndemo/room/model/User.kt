@@ -1,8 +1,8 @@
 package com.example.shankar.patterndemo.room.model
 
-import android.arch.lifecycle.LiveData
-import android.arch.persistence.room.*
-import android.support.annotation.NonNull
+import androidx.lifecycle.LiveData
+import androidx.room.*
+import androidx.annotation.NonNull
 
 @Entity(tableName = "tb_users")
 class User(

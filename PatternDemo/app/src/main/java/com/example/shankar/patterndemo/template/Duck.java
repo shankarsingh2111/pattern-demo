@@ -1,6 +1,6 @@
 package com.example.shankar.patterndemo.template;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created by shankar on 29/09/17.

@@ -1,14 +1,15 @@
 package com.example.shankar.patterndemo.room
 
 import android.app.Activity
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.widget.Toast
+import com.example.shankar.patterndemo.compose.ComposeActivity
 import com.example.shankar.patterndemo.room.adapter.UsersAdapter
 import com.example.shankar.patterndemo.room.model.User
 import com.example.shankar.patterndemo.room.viewmodel.UserViewModel
@@ -44,8 +45,10 @@ class Main3Activity : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(com.example.shankar.patterndemo.R.id.fab)
         fab.setOnClickListener {
-            val intent = Intent(this@Main3Activity, NewUserActivity::class.java)
-            startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE)
+//            val intent = Intent(this@Main3Activity, NewUserActivity::class.java)
+//            startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE)
+
+            startActivity(Intent(this@Main3Activity, ComposeActivity::class.java))
         }
 
 

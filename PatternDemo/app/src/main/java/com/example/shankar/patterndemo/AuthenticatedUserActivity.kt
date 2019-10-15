@@ -6,11 +6,11 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.shankar.patterndemo.utils.AppSignatureHelper
 import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.auth.api.credentials.Credential
@@ -84,11 +84,11 @@ class AuthenticatedUserActivity : AppCompatActivity() {
     }
 
     // Obtain the phone number from the result
-    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RESOLVE_HINT) {
             if (resultCode == Activity.RESULT_OK) {
-                val credential:Credential = data.getParcelableExtra(Credential.EXTRA_KEY)
+                val credential:Credential = data!!.getParcelableExtra(Credential.EXTRA_KEY)
                 // credential.getId();  <-- will need to process phone number string
                 editTextPhone.setText(credential.id)
             }
