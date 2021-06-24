@@ -7,9 +7,9 @@ import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
 import android.preference.PreferenceManager
-import android.support.design.widget.FloatingActionButton
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -19,11 +19,6 @@ import android.widget.ImageView
 import android.widget.ListView
 import android.widget.Toast
 import com.example.shankar.patterndemo.iterator.MenuTestDrive
-import com.example.shankar.patterndemo.qrgenerator.QRGContents
-import com.example.shankar.patterndemo.qrgenerator.QRGEncoder
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.zxing.WriterException
-import org.osmdroid.config.Configuration
 import java.util.*
 
 class MainActivity : AppCompatActivity(), ServiceConnection {
@@ -44,9 +39,6 @@ class MainActivity : AppCompatActivity(), ServiceConnection {
         ivQR = findViewById<View>(R.id.ivQR) as ImageView
 
         val ctx = applicationContext
-        //important! set your user agent to prevent getting banned from the osm servers
-        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx))
-
 
         val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
@@ -77,9 +69,6 @@ class MainActivity : AppCompatActivity(), ServiceConnection {
 
         start()
 
-        FirebaseAnalytics.getInstance(this).logEvent(FirebaseAnalytics.Event.APP_OPEN, Bundle().apply {
-            putString("here", "there")
-        })
 
     }
 
@@ -89,7 +78,6 @@ class MainActivity : AppCompatActivity(), ServiceConnection {
         //if you make changes to the configuration, use
         //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         //Configuration.getInstance().save(this, prefs);
-        Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this))
         val intent = Intent(this, LocalWordService::class.java)
         bindService(intent, this, Context.BIND_AUTO_CREATE)
     }
@@ -135,16 +123,6 @@ class MainActivity : AppCompatActivity(), ServiceConnection {
                 val service = Intent(applicationContext, LocalWordService::class.java)
                 applicationContext.startService(service)
 
-                val qrgEncoder = QRGEncoder(
-                        "Shankar", null,
-                        QRGContents.Type.TEXT,
-                        200)
-                try {
-                    val bitmap = qrgEncoder.encodeAsBitmap()
-                    ivQR!!.setImageBitmap(bitmap)
-                } catch (e: WriterException) {
-                    Log.v("HElo", e.toString())
-                }
 
             }
         }
